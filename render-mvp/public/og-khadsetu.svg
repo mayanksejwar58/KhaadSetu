@@ -1,0 +1,21 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">KhadSetu</title>
+  <desc id="desc">Soil insights and transparent fertilizer allotment</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#102c25"/><stop offset="1" stop-color="#1f5c43"/></linearGradient>
+    <linearGradient id="leaf" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#b8df91"/><stop offset="1" stop-color="#5c9f69"/></linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <circle cx="1020" cy="110" r="210" fill="#ffffff" opacity=".045"/>
+  <circle cx="1080" cy="540" r="260" fill="#ffffff" opacity=".035"/>
+  <g transform="translate(92 104)">
+    <path d="M40 120C40 45 105 5 195 0C188 88 139 150 65 150C50 150 40 140 40 120Z" fill="url(#leaf)"/>
+    <path d="M63 133C97 97 132 65 177 32" fill="none" stroke="#173e2e" stroke-width="8" stroke-linecap="round"/>
+    <path d="M72 106L112 109M104 75L145 81M132 52L164 58" fill="none" stroke="#173e2e" stroke-width="5" stroke-linecap="round"/>
+  </g>
+  <text x="330" y="220" fill="#f5f8ef" font-family="Arial, sans-serif" font-size="78" font-weight="700">KhadSetu</text>
+  <text x="96" y="355" fill="#d9edce" font-family="Arial, sans-serif" font-size="38" font-weight="600">Soil insights. Fair fertilizer allotment.</text>
+  <text x="96" y="425" fill="#e6f0e1" font-family="Arial, sans-serif" font-size="25">OCR reports Â· Verified soil readings Â· Bag allocation Â· Booking tokens</text>
+  <rect x="96" y="492" width="330" height="5" rx="2.5" fill="#a9d58a"/>
+  <text x="96" y="548" fill="#c0d4c5" font-family="Arial, sans-serif" font-size="20">KhadSetu MVP Â· AI Synergy</text>
+</svg>
