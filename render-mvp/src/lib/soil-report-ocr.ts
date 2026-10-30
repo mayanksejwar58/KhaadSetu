@@ -1,4 +1,4 @@
-'use client'
+﻿'use client'
 
 import * as pdfjs from 'pdfjs-dist'
 import { createWorker } from 'tesseract.js'
@@ -97,7 +97,8 @@ async function recognizePdf(
 ): Promise<{ pages: SoilOCRPage[]; truncated: boolean }> {
   pdfjs.GlobalWorkerOptions.workerSrc = getPdfWorkerUrl()
   const buffer = await file.arrayBuffer()
-  const document = await pdfjs.getDocument({ data: new Uint8Array(buffer) }).promise
+  const loadingTask = pdfjs.getDocument({ data: new Uint8Array(buffer) })
+  const document = await loadingTask.promise
   const pageCount = document.numPages
   const pagesToProcess = Math.min(pageCount, MAX_PDF_PAGES)
   const pages: SoilOCRPage[] = []
@@ -142,7 +143,7 @@ async function recognizePdf(
       page.cleanup()
     }
   } finally {
-    await document.destroy()
+    await loadingTask.destroy()
   }
 
   return { pages, truncated: pageCount > pagesToProcess }
@@ -209,3 +210,4 @@ export async function extractSoilReportText(
     if (worker) await worker.terminate()
   }
 }
+
