@@ -1,0 +1,20 @@
+services:
+  - type: web
+    name: khadsetu-mvp
+    runtime: node
+    rootDir: render-mvp
+    region: singapore
+    plan: free
+    buildCommand: npm install --no-audit --no-fund && npm run build
+    startCommand: npm start
+    healthCheckPath: /api/health
+    autoDeployTrigger: commit
+    envVars:
+      - key: NODE_VERSION
+        value: 24.22.1
+      - key: KHADSETU_SESSION_SECRET
+        generateValue: true
+      - key: NODE_ENV
+        value: production
+      - key: NEXT_TELEMETRY_DISABLED
+        value: "1"
